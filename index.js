@@ -6,6 +6,8 @@ const dishImage = document.querySelector('#dish-image')
 const dishName = document.querySelector('#dish-name')
 const dishPrice = document.querySelector('#dish-price')
 const addToCart = document.querySelector('#cart-form')
+const numberInCart = document.querySelector('#number-in-cart')
+
 
 
 document.addEventListener("DOMContentLoaded", () => fetchData())
@@ -13,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => fetchData())
 
 addToCart.addEventListener("submit", (e)=> {
     e.preventDefault();
-    addItemToCart(e)
+    // console.log(e.target["cart-amount"].value);
+    addItemToCart(e.target["cart-amount"].value);
 })
 
 function fetchData(){
@@ -45,6 +48,8 @@ function displayMenuItem(nameOfItem){
         showDetails(nameOfItem)
     })
 
+    // console.log(numberInCart.textContent = `Number in Cart ${nameOfItem.number_in_bag}`)
+
     menuItem.appendChild(name)
     //now i need to append it so it shows on the page - i am using the global variable menuItem, which is the id I selected and where I am want the name of menu items to go. I am appending to that node the name that I have just updated above.
 }
@@ -56,8 +61,8 @@ function showDetails(nameOfItem){
     dishPrice.textContent = nameOfItem.price
 }
 
-function addItemToCart (){
-    let newObj = {
-        
-    }
+// add menu items to the cart
+//when i click the button, the number should update
+function addItemToCart(numberToAdd){
+    numberInCart.innerHTML = parseInt(numberInCart.innerHTML) + parseInt(numberToAdd);
 }

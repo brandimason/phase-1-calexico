@@ -6,7 +6,7 @@
             "image": "./assets/calexico-guac.webp",
             "description":"House-made tortilla chips with fresh daily made guacamole",
             "price": 13.00,
-            "number_in_bag": 0
+            "number_in_bag": 1
         },
         {
             "id": 2,
