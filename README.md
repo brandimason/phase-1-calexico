@@ -24,6 +24,8 @@ Then, open the `index.html` file on your browser to run the application.
 
 Write your code in the `index.js` file.
 
+
+
 ## Challenge #1
 Fetch all the menu items from `http://localhost:3000/menu`. For each menu item create a `span` element that contains the name of the menu item, and add it to the `#menu-items` div.
 
@@ -50,3 +52,5 @@ Calculate the *total cost* of what is currently in the cart and display it somew
 
 ## Bonus Challenge #3
 Use PATCH requests to maintain the value of the cart in-between refreshes.
+
+## adding for test
